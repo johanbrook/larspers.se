@@ -1,0 +1,20 @@
+/* =ELEMENTS
+--------------------------------------------- */
+
+body {
+  color: $text-color;
+  font: normal #{$base-size}/1.6 'Merriweather', Georgia, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: to_rem(38);
+}
+
+h2 {
+  font-size: to_rem(30);
+  font-weight: 300;
+}
