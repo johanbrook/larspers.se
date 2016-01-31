@@ -1,0 +1,57 @@
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Viewport mixins
+
+@mixin respond($size, $mode) {
+  @media only screen and (#{$mode}-width: $size) {
+    @content;
+  }
+}
+
+// Shorthands
+
+@mixin smaller-than($size) {
+  @include respond($size, max) {
+    @content;
+  }
+}
+
+@mixin larger-than($size) {
+  @include respond($size, min) {
+    @content;
+  }
+}
+
+@mixin handheld {
+  @include smaller-than($handheld) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include smaller-than($tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @include smaller-than($laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include larger-than($laptop + 1px) {
+    @content;
+  }
+}
+
+@mixin large-display {
+  @include larger-than($desktop + 1px) {
+    @content;
+  }
+}

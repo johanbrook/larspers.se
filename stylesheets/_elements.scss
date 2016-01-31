@@ -3,11 +3,29 @@
 
 body {
   color: $text-color;
-  font: normal #{$base-size}/1.6 'Merriweather', Georgia, serif;
+  font: normal #{$base-size}/#{$leading / $base-size} 'Merriweather', Georgia, serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $text-color;
+}
+
+figure {
+  margin: 0;
+}
+
+p, ul, ol, blockquote {
+  margin: 0 0 $lineheight;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  margin: 0;
 }
 
 h1 {
@@ -17,4 +35,22 @@ h1 {
 h2 {
   font-size: to_rem(30);
   font-weight: 300;
+}
+
+[role="banner"] {
+  text-align: center;
+  padding: $lineheight*3 5% $lineheight / 2;
+
+  h1 {
+    line-height: 1.4;
+  }
+}
+
+[role="contentinfo"] {
+  text-align: center;
+  padding: $lineheight*2 5% 0;
+
+  ul {
+
+  }
 }

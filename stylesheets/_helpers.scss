@@ -1,0 +1,156 @@
+/* =HELPERS
+
+Functional helpers, meant to be combined.
+--------------------------------------------- */
+
+.highlight--grey {
+  color: $grey;
+}
+
+.highlight--accent {
+  color: $accent;
+}
+
+.highlight--dark {
+  color: $text-color;
+}
+
+.style--light {
+  font-weight: 300;
+}
+
+.style--italic {
+  font-style: italic;
+}
+
+.style--strong {
+  font-weight: normal;
+}
+
+.size--larger {
+  font-size: 1.3em;
+}
+
+.size--smaller {
+  font-size: .85em;
+}
+
+.with-margin {
+  margin-top: $lineheight;
+  margin-bottom: $lineheight*2;
+}
+
+.text-column {
+  max-width: to_rem(450);
+  margin-left: auto;
+  margin-right: auto;
+
+  &--centered {
+    text-align: center;
+  }
+}
+
+.with-border {
+  &::after {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 10rem;
+    margin: $lineheight auto;
+    background-color: lighten($grey, 20%);
+  }
+
+  &--accent {
+    &::after {
+      background-color: $accent;
+    }
+  }
+}
+
+.contact-grid {
+  display: flex;
+  font-weight: 300;
+  justify-content: center;
+  margin: $lineheight 0;
+
+  .grid-item {
+    text-align: center;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    a {
+      color: $text-color;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    > div {
+      z-index: 2;
+      position: relative;
+    }
+
+    &--overlay {
+      background-color: #000;
+      color: #fff;
+
+      a {
+        color: #fff;
+      }
+
+      img {
+        opacity: .4;
+      }
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  @include larger-than($handheld) {
+    flex-wrap: wrap;
+
+    .grid-item {
+      width: 32.5%;
+      margin: 0 2.5px 2.5px;
+    }
+  }
+}
+
+.contact-list {
+  @include list-reset;
+  line-height: 2;
+
+  a {
+    text-decoration: none;
+  }
+
+  &--muted {
+    a {
+      color: $grey;
+
+      &:hover {
+        color: darken($grey, 10%);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.horizontal-list {
+  display: flex;
+  justify-content: center;
+
+  > li {
+    padding: 0 1rem;
+  }
+}

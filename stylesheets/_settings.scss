@@ -4,4 +4,11 @@ $text-color:  #3e3e3e;
 $accent:      #FF6345;
 $grey:        #8D9597;
 
-$base-size:   14px;
+$base-size:   15px;
+$leading:     25px;
+$lineheight:  ($leading / $base-size) * 1rem;
+
+$desktop:           1700px;
+$laptop:            1280px;
+$tablet:            768px;
+$handheld:          481px;
