@@ -7,6 +7,10 @@ Functional helpers, meant to be combined.
   color: $grey;
 }
 
+.highlight--bright {
+  color: #fff;
+}
+
 .highlight--accent {
   color: $accent;
 }
@@ -48,6 +52,36 @@ Functional helpers, meant to be combined.
   &--centered {
     text-align: center;
   }
+}
+
+.logo {
+  width: to_rem(175);
+  margin: 0 auto $lineheight;
+  display: block;
+  opacity: .9;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.with-initial {
+  &::first-letter {
+    font-size: 3.2em;
+    margin-right: .2ex;
+    float: left;
+    line-height: 1;
+    font-weight: 300;
+    font-style: italic;
+    color: #555;
+  }
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
 }
 
 .with-border {
@@ -96,18 +130,22 @@ Functional helpers, meant to be combined.
 
     &--overlay {
       background-color: #000;
-      color: #fff;
+      color: rgba(#fff, .9);
 
       a {
-        color: #fff;
+        color: rgba(#fff, .9);
+
+        &:hover {
+          color: #fff;
+        }
       }
 
-      img {
+      .figure-background {
         opacity: .4;
       }
     }
 
-    img {
+     .figure-background {
       display: block;
       position: absolute;
       top: 0;
@@ -129,6 +167,20 @@ Functional helpers, meant to be combined.
 .contact-list {
   @include list-reset;
   line-height: 2;
+  font-weight: 300;
+  font-size: 1em;
+
+  .contact-detail {
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    font-size: 1.7em;
+    position: relative;
+    top: .4ex;
+    margin: 0 .5em;
+  }
 
   a {
     text-decoration: none;

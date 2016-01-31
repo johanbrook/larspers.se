@@ -4,21 +4,55 @@
     <meta charset="utf-8">
     <title>Lars Pers i Fors – Getost och honung</title>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/master.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/master.css">
     <meta name="author" content="Lars Pers">
     <meta name="keywords" content="Lars Pers, getost, getter, getgård, Österfärnebo, Gästrikland, Brook">
     <meta name="description" content="TODO">
-    <!-- inject:css -->
-    <!-- endinject -->
+
+    <meta property="og:url" content="http://www.larspers.se">
+    <meta property="og:site_name" content="Lars Pers">
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Lars Pers i Fors">
+    <meta property="og:description" content="TODO">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="fb:app_id" content="1018183404867766">
+    <meta property="og:locale" content="sv_SE">
+
+    <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "name" : "Lars Pers i Fors",
+      "image" : "http://larspers.se/images/og-image.jpg",
+      "url" : "http://larspers.se/",
+      "logo" : "http://larspers.se/images/larspers-logo.png",
+      "sameAs" : [
+        "https://www.facebook.com/Lars-Pers-i-Fors-271117322948242"
+      ],
+      "contactPoint" : [{
+        "@type" : "ContactPoint",
+        "telephone" : "+4670-536 61 60",
+        "contactType" : "customer service",
+        "availableLanguage": ["English", "Swedish"]
+      }]
+    }
+    </script>
   </head>
   <body>
     <header role="banner">
+      <a href="/" class="logo">
+        <img src="images/larspers-logo.svg" alt="Lars Pers">
+      </a>
+
       <h1 class="with-border with-border--accent">Getost, honung, och mycket mer<br><span class="highlight--accent style--light style--italic">hos Lars Pers i Fors</span></h1>
     </header>
 
     <main role="main">
 
-      <div class="text-column with-margin">
+      <div class="text-column with-initial with-margin">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         <p>Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
@@ -26,33 +60,40 @@
 
       <div class="contact-grid">
         <figure class="grid-item">
-          <img src="images/Goat.jpg" alt="Goat">
+          <img src="images/Goat.jpg" class="figure-background" alt="Goat">
         </figure>
         <figure class="grid-item">
-          <img src="images/Honey.jpg" alt="Honey">
+          <img src="images/Honey.jpg" class="figure-background" alt="Honey">
         </figure>
         <figure class="grid-item">
-          <img src="images/Goat-2.jpg" alt="Goat">
+          <img src="images/Goat-2.jpg" class="figure-background" alt="Goat">
         </figure>
         <figure class="grid-item grid-item--overlay">
           <div>
             <p>Nästa marknad</p>
-            <p class="size--larger">Gysinge marknad, 20-21 maj</p>
+            <p class="size--larger highlight--bright">Gysinge marknad, 20-21 maj</p>
             <p class="size--smaller style--italic">Få fler uppdatering från vår <a href="https://www.facebook.com/Lars-Pers-i-Fors-271117322948242">Facebook</a></p>
           </div>
-          <img src="images/Goat-3.jpg" alt="Goat">
+          <img src="images/Goat-3.jpg" class="figure-background" alt="Goat">
         </figure>
         <figure class="grid-item grid-item--overlay">
 
           <div>
             <ul class="contact-list size--larger">
-              <li><a href="https://www.facebook.com/Lars-Pers-i-Fors-271117322948242">Följ oss på Facebook</a></li>
-              <li><a href="#">Ring oss på 070-536 61 60</a></li>
-              <li><a href="mailto:info@larspers.se">Maila oss på info@larspers.se</a></li>
+              <li><a href="https://www.facebook.com/Lars-Pers-i-Fors-271117322948242">Följ oss på
+                <svg class="icon">
+                  <use xlink:href="images/icons.svg#icon-facebook-with-circle"></use>
+                </svg> <span class="contact-detail">Facebook</span></a></li>
+              <li><a href="tel:0705366160">Ring oss på <svg class="icon">
+                <use xlink:href="images/icons.svg#icon-phone"></use>
+              </svg> <span class="contact-detail">070-536 61 60</span></a></li>
+              <li><a href="mailto:info@larspers.se">Maila oss på <svg class="icon">
+                <use xlink:href="images/icons.svg#icon-paper-plane"></use>
+              </svg> <span class="contact-detail">info@larspers.se</span></a></li>
             </ul>
           </div>
 
-          <img src="images/Cheese.jpg" alt="Cheese">
+          <img src="images/Cheese.jpg" class="figure-background" alt="Cheese">
         </figure>
         <figure class="grid-item">
           <div>
@@ -60,7 +101,7 @@
               Du hittar oss på adressen
             </p>
             <p class="size--larger">
-              <a href="#">Hornbergsvägen 4<br>
+              <a href="https://www.google.com/maps/place/Hornbergsv%C3%A4gen+4,+810+20+%C3%96sterf%C3%A4rnebo,+Sweden/@60.2914367,16.7483869,11.82z/data=!4m2!3m1!1s0x4660a9b58eccdfed:0x5128e6cd858a4686">Hornbergsvägen 4<br>
               810 20 Österfärnebo</a>
             </p>
             <p class="highlight--grey">
@@ -91,5 +132,7 @@
         </p>
       </footer>
     </main>
+
+    <!-- Site and design by Johan (johanbrook.com) -->
   </body>
 </html>
