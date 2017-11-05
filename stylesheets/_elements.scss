@@ -3,7 +3,7 @@
 
 body {
   color: $text-color;
-  font: normal #{$base-size}/#{$leading / $base-size} 'Merriweather', Georgia, serif;
+  font: normal #{$base-size}/#{$leading / $base-size} $serif;
 }
 
 img {
@@ -33,8 +33,13 @@ h1 {
 }
 
 h2 {
-  font-size: to_rem(30);
-  font-weight: 300;
+  font-size: to_rem(22);
+  margin-bottom: $lineheight;
+  font-style: italic;
+}
+
+h3 {
+  font-size: to_rem(20);
 }
 
 [role="banner"] {
@@ -50,7 +55,7 @@ h2 {
   text-align: center;
   padding: $lineheight*2 5% 0;
 
-  ul {
-
+  h2 {
+    font-style: normal;
   }
 }
