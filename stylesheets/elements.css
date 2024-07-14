@@ -1,9 +1,12 @@
 /* =ELEMENTS
 --------------------------------------------- */
+:root {
+    color-scheme: light;
+}
 
 body {
-  color: $text-color;
-  font: normal #{$base-size}/#{$leading / $base-size} $serif;
+  color: var(--text-color);
+  font: normal var(--base-size)/var(--leading) var(--serif);
 }
 
 img {
@@ -12,7 +15,13 @@ img {
 }
 
 a {
-  color: $text-color;
+  color: var(--text-color);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 figure {
@@ -20,7 +29,7 @@ figure {
 }
 
 p, ul, ol, blockquote {
-  margin: 0 0 $lineheight;
+  margin: 0 0 1rlh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,22 +38,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: to_rem(38);
+  font-size: 2.375rem;
 }
 
 h2 {
-  font-size: to_rem(22);
-  margin-bottom: $lineheight;
+  font-size: 1.375rem;
+  margin-bottom: 1rlh;
   font-style: italic;
 }
 
 h3 {
-  font-size: to_rem(20);
+  font-size: 1.25rem;
 }
 
 [role="banner"] {
   text-align: center;
-  padding: $lineheight 5% $lineheight / 2;
+  padding: 1rlh 5% 0.5rlh;
 
   h1 {
     line-height: 1.4;
@@ -53,7 +62,7 @@ h3 {
 
 [role="contentinfo"] {
   text-align: center;
-  padding: $lineheight*2 5% 0;
+  padding: 2rlh 5% 0;
 
   h2 {
     font-style: normal;

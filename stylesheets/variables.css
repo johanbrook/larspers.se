@@ -1,0 +1,11 @@
+:root {
+    --text-color: #3e3e3e;
+    --accent: #ff6345;
+    --grey: #8d9597;
+
+    --serif: "Merriweather", Georgia, serif;
+    --sans: Lato, Helvetica, sans-serif;
+
+    --base-size: 1rem;
+    --leading: 1.6;
+}

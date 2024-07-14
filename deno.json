@@ -1,0 +1,11 @@
+{
+    "tasks": {
+        "build": "deno task css:build",
+        "watch": "file_server & deno run -A css.ts",
+        "css:build": "deno run -A css.ts --build"
+    },
+    "imports": {
+        "@std/async": "jsr:@std/async@^0.224.2",
+        "lightningcss": "npm:lightningcss@^1.25.1"
+    }
+}

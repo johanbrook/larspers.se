@@ -4,7 +4,7 @@ Functional helpers, meant to be combined.
 --------------------------------------------- */
 
 .highlight--grey {
-  color: $grey;
+  color: var(--grey);
 }
 
 .highlight--bright {
@@ -12,11 +12,11 @@ Functional helpers, meant to be combined.
 }
 
 .highlight--accent {
-  color: $accent;
+  color: var(--accent);
 }
 
 .highlight--dark {
-  color: $text-color;
+  color: var(--text-color);
 }
 
 .style--light {
@@ -40,12 +40,12 @@ Functional helpers, meant to be combined.
 }
 
 .with-margin {
-  margin-top: $lineheight;
-  margin-bottom: $lineheight*2;
+  margin-top: 1rlh;
+  margin-bottom: 2rlh;
 }
 
 .text-column {
-  max-width: to_rem(450);
+  max-width: 48ch;
   margin-left: auto;
   margin-right: auto;
 
@@ -55,8 +55,8 @@ Functional helpers, meant to be combined.
 }
 
 .logo {
-  width: to_rem(175);
-  margin: 0 auto $lineheight;
+  width: 11rem;
+  margin: 0 auto 1rlh;
   display: block;
   opacity: .9;
 
@@ -67,7 +67,7 @@ Functional helpers, meant to be combined.
 
 .with-initial {
   &::first-letter {
-    font-size: 3.2em;
+    font-size: 2lh;
     margin-right: .2ex;
     float: left;
     line-height: 1;
@@ -94,33 +94,44 @@ Functional helpers, meant to be combined.
     content: '';
     height: 1px;
     width: 10rem;
-    margin: $lineheight auto;
-    background-color: lighten($grey, 20%);
+    margin: 1rlh auto;
+    background-color: colox-mix(in srgb, var(--grey), white 20%);
   }
 
   &--accent {
     &::after {
-      background-color: $accent;
+      background-color: var(--accent);
     }
   }
 }
 
 .contact-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 33vw;
+  gap: 5px;
   font-weight: 300;
   justify-content: center;
-  margin: $lineheight 0;
+  margin: 1rlh 0;
+  
+    .figure-background {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
 
   .grid-item {
     text-align: center;
-    height: 420px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 
     a {
-      color: $text-color;
+      color: var(--text-color);
     }
 
     p {
@@ -132,12 +143,12 @@ Functional helpers, meant to be combined.
       position: relative;
     }
 
-    &--overlay {
+    &.grid-item--overlay {
       background-color: #000;
-      color: rgba(#fff, .9);
+      color: rgb(255 255 255 / 90%);
 
       a {
-        color: rgba(#fff, .9);
+        color: rgb(255 255 255 / 90%);
 
         &:hover {
           color: #fff;
@@ -148,28 +159,18 @@ Functional helpers, meant to be combined.
         opacity: .4;
       }
     }
-
-     .figure-background {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
   }
-
-  @include larger-than($handheld) {
-    flex-wrap: wrap;
-
-    .grid-item {
-      width: 32.5%;
-      margin: 0 2.5px 2.5px;
-    }
+  
+  @media only screen and (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      
+      .grid-item:where(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4)) {
+          display: none;
+      }
   }
 }
 
 .contact-list {
-  @include list-reset;
   line-height: 2;
   font-weight: 300;
   font-size: 1em;
@@ -182,20 +183,15 @@ Functional helpers, meant to be combined.
   .icon {
     font-size: 1.7em;
     position: relative;
-    top: .4ex;
     margin: 0 .5em;
-  }
-
-  a {
-    text-decoration: none;
   }
 
   &--muted {
     a {
-      color: $grey;
+      color: var(--grey);
 
       &:hover {
-        color: darken($grey, 10%);
+        color: color-mix(in rgb, var(--grey), black 10%);
         text-decoration: underline;
       }
     }
