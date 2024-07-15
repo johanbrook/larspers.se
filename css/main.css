@@ -156,6 +156,7 @@
 body {
   color: var(--text-color);
   font: normal var(--base-size) / var(--leading) var(--serif);
+  margin-inline: 5%;
 }
 
 img {
